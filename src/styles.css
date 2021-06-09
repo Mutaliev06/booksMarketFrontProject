@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+}
+
+header,
+main,
+footer,
+.news-item{
+  border: 3px solid black;
+}
+
+.logo{
+  width: 100%;
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn_a{
+  text-decoration: none;
+}
+
+.btn_div{
+  display: flex;
+  flex-direction: column;
+  font-family: serif;
+}

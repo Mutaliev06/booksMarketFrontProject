@@ -1,0 +1,78 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Книжный магазин</title>
+
+  <script>
+    let promise = fetch('http://localhost:3006/')
+    //console.log(promise)
+    promise.then((res) => {
+      const text = res.json();
+      console.log(text)
+      // text.then((t) => {
+      //   console.log(t.value)
+      //   let block = document.getElementById('newsContainer');
+      //   let text = document.createElement('div');
+      //   text.append(t.value);
+      //   block.append(text);
+      //})
+    })
+  </script>
+</head>
+
+<body>
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <img src="./assets/logo.png" alt="Лого"
+             class="logo"/>
+      </div>
+      <div class="col-9">
+        <div class="items">
+          <div class="item">Главная</div>
+          <div class="item">О нас</div>
+          <div class="item">Контакты</div>
+          <div class="item">Адрес</div>
+          <div class="item">Log In</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="row" id="rowItem">
+      <div class="col-2" id="main-bar">
+        <div class="btn_div">
+          <a class="btn_a" href="http://localhost:3006/genres/60c0cee23f84aacf202cdb18/books">Учебная литература</a>
+          <a class="btn_a" href="#">Бизнес-литература</a>
+          <a class="btn_a" href="#">Религия</a>
+          <a class="btn_a" href="#">Фантастика</a>
+          <a class="btn_a" href="#">Хобби и досуг</a>
+          <a class="btn_a" href="#">Кулинария</a>
+          <a class="btn_a" href="#">Энциклопедия</a>
+        </div>
+      </div>
+      <div class="col-9" id="newsContainer">
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container-fluid"></div>
+</footer>
+</body>
+
+</html>
