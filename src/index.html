@@ -10,26 +10,6 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <title>Книжный магазин</title>
-
-  <script>
-
-    function getBooks() {
-      fetch('http://localhost:3006/')
-      .then(res => res.json())
-      .then(data => {
-        data.forEach((item, key) => {
-          let block = document.getElementById('newsContainer');
-          let textTo = document.createElement('div');
-          textTo.append(data[key].name +' - '+data[key].title)
-          block.append(textTo)
-        })
-
-        console.log(data)
-      })
-
-    }
-    getBooks();
-  </script>
 </head>
 
 <body>
@@ -56,19 +36,16 @@
 <main>
   <div class="container">
     <div class="row" id="rowItem">
-      <div class="col-2" id="main-bar">
-        <div class="btn_div">
-          <a class="btn_a" href="http://localhost:3006/genres/60c0cee23f84aacf202cdb18/books">Учебная литература</a>
-          <a class="btn_a" href="#">Бизнес-литература</a>
-          <a class="btn_a" href="#">Религия</a>
-          <a class="btn_a" href="#">Фантастика</a>
-          <a class="btn_a" href="#">Хобби и досуг</a>
-          <a class="btn_a" href="#">Кулинария</a>
-          <a class="btn_a" href="#">Энциклопедия</a>
+      <div class="col-2" id="main_bar">
+        <div id="btn_div">
+
         </div>
       </div>
       <div class="col-9" id="newsContainer">
+        <div id="items">
 
+        </div>
+      </div>
       </div>
     </div>
   </div>
