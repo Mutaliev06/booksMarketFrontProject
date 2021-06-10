@@ -35,7 +35,22 @@ module.exports = (item) => {
     card.append(price)
     card.append(review)
     block.append(card)
-    review.append('Отзывы читателей:')
+    const reviewInput = document.createElement('div')
+    const nameInput = document.createElement('input')
+    const textInput = document.createElement('input')
+    const btnInput = document.createElement('button')
+    const createInput = document.createElement('div')
+    createInput.append(nameInput, textInput, btnInput)
+    btnInput.append('Добавить')
+    reviewInput.append('Оставить отзыв:')
+    reviewInput.append(createInput)
+    review.append(reviewInput, 'Отзывы читателей:')
+    nameInput.placeholder = 'Введите имя'
+    textInput.placeholder = 'Введите отзыв'
+    btnInput.type = 'submit'
+    nameInput.name = 'userName'
+    textInput.name = 'text'
+    console.log(item._id)
 
 
       fetch(`http://localhost:3006/book/${item._id}/reviews`)
