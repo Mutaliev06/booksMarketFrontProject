@@ -9,20 +9,96 @@ footer,
   border: 3px solid black;
 }
 
+#main_bar{
+  margin-top: 20px;
+}
+
 .logo{
   width: 100%;
 }
+
 .items{
   display: flex;
   justify-content: space-between;
 }
 
-.btn_a{
+#items{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.image{
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageGenreClick{
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgDivGenreClick{
+  display: flex;
+}
+
+.imgDiv{
+  height: 170px;
+}
+
+#card{
+  margin-top: 20px;
+}
+
+.genre_ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.genre_a{
   text-decoration: none;
+}
+
+.name{
+  text-align: center;
+  height: 50px;
+  margin: 0 auto;
+  font-family: "Times New Roman";
+}
+
+.price{
+  display: flex;
+  justify-content: space-around;
+  background-color: darkgray;
+  padding: 10px;
+  margin: 3px;
+  border-radius: 5px;
+  line-height: 38px;
+}
+
+.priceGenreClick{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .btn_div{
   display: flex;
   flex-direction: column;
   font-family: serif;
+}
+
+.btn{
+  border-radius: 3px;
+  background-color: aliceblue;
+}
+
+.reviewDiv{
+  display: flex;
+  justify-content: space-around;
+  background-color: beige;
+  margin: 5px;
 }
