@@ -12,19 +12,23 @@
   <title>Книжный магазин</title>
 
   <script>
-    let promise = fetch('http://localhost:3006/')
-    //console.log(promise)
-    promise.then((res) => {
-      const text = res.json();
-      console.log(text)
-      // text.then((t) => {
-      //   console.log(t.value)
-      //   let block = document.getElementById('newsContainer');
-      //   let text = document.createElement('div');
-      //   text.append(t.value);
-      //   block.append(text);
-      //})
-    })
+
+    function getBooks() {
+      fetch('http://localhost:3006/')
+      .then(res => res.json())
+      .then(data => {
+        data.forEach((item, key) => {
+          let block = document.getElementById('newsContainer');
+          let textTo = document.createElement('div');
+          textTo.append(data[key].name +' - '+data[key].title)
+          block.append(textTo)
+        })
+
+        console.log(data)
+      })
+
+    }
+    getBooks();
   </script>
 </head>
 
